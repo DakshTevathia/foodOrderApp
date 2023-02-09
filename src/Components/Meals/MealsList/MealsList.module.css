@@ -1,0 +1,7 @@
+.div {
+  background-color: papayawhip;
+  box-shadow: 3px 3px 2px rgb(219, 215, 208);
+  border: solid papayawhip 1px;
+  border-radius: 20px;
+  margin: 2rem 10%;
+}

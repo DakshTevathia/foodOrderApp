@@ -1,0 +1,14 @@
+.container {
+  line-height: 1.5;
+  border: solid papayawhip 1px;
+  border-radius: 5px;
+  background-color: papayawhip;
+  margin: 0 20%;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  box-shadow: 3px 3px 2px rgb(219, 215, 208);
+}
+
+.container h2 {
+  text-align: center;
+}

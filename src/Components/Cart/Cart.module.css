@@ -1,0 +1,28 @@
+.cartDiv {
+  border: 1px solid rgb(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 15%;
+}
+
+.cartDiv:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.cartDistribution {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 2.5rem;
+}
+
+.cartDistribution:nth-child(1) {
+  align-self: center;
+}
+
+span:last-child {
+  border-radius: 20px;
+  background-color: papayawhip;
+  padding: 0 1rem;
+}
