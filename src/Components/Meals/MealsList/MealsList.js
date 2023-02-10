@@ -3,10 +3,10 @@ import IndividualMeal from "../IndividualMeals/IndividualMeal.js";
 import { DUMMY_MEALS } from "../MealsData.js";
 import classes from "./MealsList.module.css";
 
-const MealsList = ({ }) => {
+const MealsList = () => {
   return (
     <div className={classes.div}>
-      {DUMMY_MEALS.map((ele, idx, array) => (
+      {DUMMY_MEALS.map((ele) => (
         <IndividualMeal
           key={ele.id}
           id={ele.id}

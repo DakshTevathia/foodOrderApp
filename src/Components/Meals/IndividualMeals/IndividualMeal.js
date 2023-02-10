@@ -5,11 +5,11 @@ import CartContext from "../../../Store/CartContext";
 
 const IndividualMeal = ({ name, description, price, id }) => {
   const cartCtx = useContext(CartContext);
-  const onAddToCart = (totalAmount) => {
+  const onAddToCart = (quantity) => {
     cartCtx.addItem({
       id: id,
       name: name,
-      amount: totalAmount,
+      amount: quantity,
       price: price,
     });
   };
@@ -19,7 +19,7 @@ const IndividualMeal = ({ name, description, price, id }) => {
       <div className={classes.mealDetails}>
         <div>{name}</div>
         <div>{description}</div>
-        <div>{price}</div>
+        <div>{`₹${price}`}</div>
       </div>
       <div className={classes.amount_and_add}>
         <MealForm id={id} onAddToCart={onAddToCart} />

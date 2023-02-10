@@ -6,7 +6,7 @@ const MealForm = ({ id, onAddToCart }) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
   const onAddClicked = () => {
     const enteredAmount = amountInputRef.current.value;
-    //by ref's it's always a string
+    //by default with ref's return value is always a string
     const enteredAmountNumber = parseInt(enteredAmount);
     if (
       enteredAmount.trim().length === 0 ||
@@ -16,6 +16,7 @@ const MealForm = ({ id, onAddToCart }) => {
       setAmountIsValid(false);
       return;
     }
+    setAmountIsValid(true);
     onAddToCart(enteredAmountNumber);
   };
 
@@ -33,13 +34,7 @@ const MealForm = ({ id, onAddToCart }) => {
           defaultValue: "1",
         }}
       />
-      <button
-        onClick={() => {
-          onAddClicked();
-        }}
-      >
-        Add
-      </button>
+      <button onClick={onAddClicked}>Add</button>
       {!amountIsValid && <p> Please Enter Valid Amount(1-10)</p>}
     </>
   );
